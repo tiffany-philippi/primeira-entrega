@@ -95,12 +95,18 @@
     '}' => '%7d',
     '~' => '%7e');
 
-        $origem = "%41%6c%6f%5b%5d";
+    
+
+        $origem = "%49g%6f%72 %73a%66%61%64o";
         $array = str_split($origem);
         $i = 0;
         $estado = 0;
+        $destino = '';
+        $pattern = '/[%]{1}[0-9A-Fa-f]{2}/m';
+        $chaves = array_keys($array_from_to);
 
         if($estado == 0){
+          
         for ($i; $i < sizeof($array); $i++) {
           if($array[$i] != '%'){
             $destino .= $array[$i];
@@ -113,18 +119,22 @@
           $char .= $array[$j+1];
           $char .= $array[$j+2];
           
-          if(preg_match_all('/[%]{1}[0-9A-Fa-f]{2}/m', $char, array_keys($array_from_to), PREG_SET_ORDER, 0)){
+          if(preg_match_all($pattern, $char, $chaves, PREG_SET_ORDER, 0)){
           $charDecrypt = str_replace(array_values($array_from_to), array_keys($array_from_to), $char);
-          $destino .= $charDecrypt;
           
+          $destino .= $charDecrypt;
           $i++;
           $i++;
 
           $estado=0;
           }
+          
          }
-          echo $destino;
+          
           
         }
       
     }
+
+    echo "Origem: " . $origem . "<br>";
+    echo "Descriptografado: " . $destino;
