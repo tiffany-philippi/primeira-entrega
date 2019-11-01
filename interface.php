@@ -140,6 +140,7 @@
 <style>
 	* {
 		font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+		color: #fff;
 	}
 	iframe{
 		width: 100%;
@@ -147,12 +148,21 @@
 	}
 	.jumbotron{
 		padding: 2rem;
+		background-color: #192525;
 	}
 	.background {
-		background: url("img.jpg") no-repeat;
+		background: url("imge.jpg") no-repeat;
 		background-size: contain;
 		width: 100%;
 		height: 100%;
+	}
+	.card-header, button {
+		background-color: #5b6365;
+	}
+	.form-control:focus {
+    border-color: #192525;
+    box-shadow: 0 0 0 0.2rem rgba(25, 37, 37, 0.25);
+}
 	}
 </style>
 </head>
