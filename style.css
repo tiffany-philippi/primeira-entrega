@@ -1,0 +1,16 @@
+* {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+iframe{
+    width: 100%;
+    height: 100px;
+}
+.jumbotron{
+    padding: 2rem;
+}
+.background {
+    background: url("img.jpg") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
