@@ -1,0 +1,64 @@
+* {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  color: #fff;
+}
+.title{
+  padding: 2rem;
+  background-color: #242b31;
+  text-align: center;
+}
+.menu {
+  background-color: #5a9c92;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #242b31;
+  border-top: 1px solid #fff;
+}
+a.active, a:hover {
+  color: #fff;
+}
+a.disabled {
+  color: #5b6365 !important;
+}
+.background {
+  background: url("imge.jpg") no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.nav-tabs, button {
+  background-color: #5b6365;
+}
+.form-control:focus {
+  border-color: #192525;
+  box-shadow: 0 0 0 0.2rem rgba(25, 37, 37, 0.25);
+}
+label, select, option, a {
+  color: #242b31;
+}
+select {
+  display: inline-block;
+  width: 38%;
+  height: 38px;
+  border-radius: 3px;
+}
+.origem {
+  display: inline-block;
+  width: 58%;
+  margin-left: 3%;
+}
+.float {
+  float: right;
+  margin: 0 1% 2%;
+}
+.buttons {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+#inputUpload {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  border-color: #ced4da;
+}
