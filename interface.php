@@ -137,34 +137,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Desofuscando URLs</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<style>
-	* {
-		font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-		color: #fff;
-	}
-	iframe{
-		width: 100%;
-		height: 100px;
-	}
-	.jumbotron{
-		padding: 2rem;
-		background-color: #192525;
-	}
-	.background {
-		background: url("imge.jpg") no-repeat;
-		background-size: contain;
-		width: 100%;
-		height: 100%;
-	}
-	.card-header, button {
-		background-color: #5b6365;
-	}
-	.form-control:focus {
-    border-color: #192525;
-    box-shadow: 0 0 0 0.2rem rgba(25, 37, 37, 0.25);
-}
-	}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -177,18 +150,20 @@
 			<div class="card">
 				<div class="card-header">Leitura de URL</div>
 				<div class="card-body">
-					<form action="verify()" target="iframeUpload">
+					<form target="result">
 						<div class="form-group">
 							<label>URL:</label>
 							<input type="text" name="origem" class="form-control">
+							<select name="select">
+								<option value="select">Selecione a linguagem</option>
+								<option value="hexa">Hexa</option>
+								<option value="bi">Bi</option>
+							</select>
 						</div>
 						<button type="submit" id="bt_carregar" class="btn">Carregar</button>
 						<button type="reset" class="btn">Limpar</button>
 					</form>
-					<iframe name="iframeUpload" id="iframeUpload"> 
-						<?php
-							echo $destino;
-						?>
+						<input type="text" name="result" class="form-control">
 					</iframe>
 				</div>
 			</div>
