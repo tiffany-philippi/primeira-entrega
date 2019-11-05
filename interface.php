@@ -60,7 +60,7 @@
 				<a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#">Sobre</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#">Blog</a>
+				<a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="bloc;">Blog</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#">Contato</a>
@@ -73,73 +73,66 @@
 			<div class="col">
 				<div class="card">
 
-					<ul class="nav nav-tabs" id="myTab" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#leitura" role="tab" aria-controls="home" aria-selected="true">Leitura de URL</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#upload" role="tab" aria-controls="profile" aria-selected="false">Upload de URL</a>
-						</li>
-					</ul>
-					
-					<div class="card-body">
-						<div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab" id="leitura">
-							<form target="result">
-								<div class="form-group">
-									<label>URL:</label>
-									<div class="url">
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Leitura de URL</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Upload de URL</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <form target="result">
+        <div class="form-group">
+            <label>URL:</label>
+            <div class="url">
 
-										<select name="select">
-											<option value="select">Selecione a linguagem</option>
-											<option value="hexa">Hexa</option>
-											<option value="bi">Bi</option>
-										</select>
-										<input type="text" name="origem" class="form-control origem">
+                <select name="select">
+                    <option value="select">Selecione a linguagem</option>
+                    <option value="hexa">Hexa</option>
+                    <option value="bi">Bi</option>
+                </select>
+                <input type="text" name="origem" class="form-control origem">
 
-									</div>
-								</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="res">Resultado:</label>
+            <input type="text" name="result" class="form-control">
+        </div>
 
-								<div class="buttons">
-									<button type="submit" id="bt_loading" class="btn float">Carregar</button>
-									<button type="reset" class="btn float">Cancelar</button>
-								</div>
+        <div class="buttons">
+            <button type="submit" id="bt_loading" class="btn float">Carregar</button>
+            <button type="reset" class="btn float">Cancelar</button>
+        </div>
 
-							</form>
-							<div class="form-group">
+    </form>
+  
+</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+  <div class="form-group">
+    <label>Arquivo:</label>
+    <div class="arq">
+        <input type="file" name="arquivos[]" class="form-control arquivo" id="arq">
+    </div>
 
-								<label for="res">Resultado:</label>
-								<input type="text" name="result" class="form-control">
+    </div>
 
-							</div>
-						</div>
+    <div class="buttons">
+        <button type="submit" id="bt_loading" class="btn float">Carregar</button>
+        <button type="reset" class="btn float">Cancelar</button>
+    </div>
 
-						<div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab" id="upload">
-							<form action="grava.php" method="post" name="enviar" id="enviar" enctype="multipart/form-data" target="inputUpload">
-								<div class="form-group">
+    <div class="form-group">
+        <label for="res">Resultado:</label>
+        <textarea name="inputUpload" id="inputUpload" disabled></textarea>
+    </div>
+    <button type="" class="btn float">Download</button>
 
-									<label>Arquivo:</label>
-									<div class="arq">
-										<input type="text" name="arquivos[]" class="form-control arquivo" id="arq">
-									</div>
+  </div>
 
-								</div>
-
-								<div class="buttons">
-									<button type="submit" id="bt_loading" class="btn float">Carregar</button>
-									<button type="reset" class="btn float">Cancelar</button>
-								</div>
-
-							</form>
-
-							<div class="form-group">
-								<label for="res">Resultado:</label>
-								<textarea name="inputUpload" id="inputUpload" disabled></textarea>
-							</div>
-
-							<button type="" class="btn float">Download</button>
-						</div>
-
-					</div>
+</div>
 				</div>
 			</div>
 			
